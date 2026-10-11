@@ -35,8 +35,10 @@ for (let p of pages) {
   a.textContent = title;
 
   // Highlight the current page
+  let currentPath = location.pathname.replace(/index\.html$/, '');
+
   if (a.host === location.host &&
-      a.pathname === location.pathname) {
+      a.pathname === currentPath) {
     a.classList.add('current');
   }
 
